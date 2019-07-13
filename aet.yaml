@@ -6,7 +6,7 @@ inputs:
   - {name: Learning rate,         type: Float, default: '0.1',              description: 'Learning rate for training.'}
   - {name: Optimizer,             type: String, default: 'Adagrad', description: 'Optimizer for training. Valid values are: Adam, SGD, Adagrad. If not provided, tf.estimator default will be used.'}
   - {name: Hidden layer size,     type: String, default: '100',             description: 'Comma-separated hidden layer sizes. For example "200,100,50".'}
-  - {name: Steps,                 type: Integer,                            description: 'Maximum number of training steps to perform. If unspecified, will honor epochs.'}
+  - {name: Steps,                 type: Integer, default: '1',            description: 'Maximum number of training steps to perform. If unspecified, will honor epochs.'}
   - {name: Epochs,                type: Integer, default: '500',               description: 'Maximum number of training data epochs on which to train. If both "steps" and "epochs" are specified, the training job will run for "steps" or "epochs", whichever occurs first.'}
   - {name: Encoding Dimension, type: Integer, default: '100', description: 'Encoding Dimension'}
   - {name: Training output dir,   type: GCSPath,  description: 'GCS or local directory.'} # type: {GCSPath: {path_type: Directory}}
