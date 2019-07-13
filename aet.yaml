@@ -22,7 +22,6 @@ implementation:
       --learning-rate, {inputValue: Learning rate},
       --optimizer, {inputValue: Optimizer},
       --hidden-layer-size, {inputValue: Hidden layer size},
-      --steps, {inputValue: Steps},
       --epochs, {inputValue: Epochs},
       --encoding-dim, {inputValue: Encoding Dimension},
       --job-dir, {inputValue: Training output dir},
