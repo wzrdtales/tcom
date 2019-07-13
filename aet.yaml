@@ -3,7 +3,6 @@ description: Trains Auto Encoder
 inputs:
   - {name: Pickle file,  type: GCSPath,  description: 'GCS path containing tf-transformed training and eval data.'} # type: {GCSPath: {path_type: Directory}}
   - {name: Batch Size,                type: Integer, default: '64',      description: 'The batch size'} # type: {GCSPath: {data_type: JSON}}
-  - {name: Learning rate,         type: Float, default: '0.1',              description: 'Learning rate for training.'}
   - {name: Optimizer,             type: String, default: 'Adagrad', description: 'Optimizer for training. Valid values are: Adam, SGD, Adagrad. If not provided, tf.estimator default will be used.'}
   - {name: Hidden layer size,     type: String, default: '100',             description: 'Comma-separated hidden layer sizes. For example "200,100,50".'}
   - {name: Steps,                 type: Integer, default: '1',            description: 'Maximum number of training steps to perform. If unspecified, will honor epochs.'}
@@ -19,7 +18,6 @@ implementation:
     args: [
       --pickle-file, {inputValue: Pickle file},
       --batch-size, {inputValue: Batch Size},
-      --learning-rate, {inputValue: Learning rate},
       --optimizer, {inputValue: Optimizer},
       --hidden-layer-size, {inputValue: Hidden layer size},
       --epochs, {inputValue: Epochs},
