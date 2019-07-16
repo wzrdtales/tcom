@@ -13,7 +13,7 @@ outputs:
   - {name: Training output dir,   type: GCSPath,  description: 'GCS or local directory.'} # type: {GCSPath: {path_type: Directory}}
 implementation:
   container:
-    image: gitlab-registry.int.asip.cloud:443/fraud-ai/device-anomaly-score-v3:training
+    image: gitlab-ana-reg.prod.asip.cloud/fraud-ai/device-anomaly-score-v3:training
     command: [/entry.sh, -m, trainer.task]
     args: [
       --pickle-file, {inputValue: Pickle file},
